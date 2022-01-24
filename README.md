@@ -4,7 +4,7 @@ Manhwa/Manga Scrapper from hiperdex.com based on cheerio and node.js
 
 ## Test Url
 
-manhwa-api.vercel.app/api/
+manhwa-scraper-api.vercel.app/api
 
 ## Installing
 
