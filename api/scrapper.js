@@ -5,7 +5,7 @@ async function info(slug) {
     let genres = []
 
     try{
-        res = await axios.get(`https://hentai20.com/manga/${slug}`)
+        res = await axios.get(`https://hentaiscan.net/manga/${slug}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
@@ -26,7 +26,7 @@ async function info(slug) {
         
         let description = $('.description-summary').text().trim()
 
-        let ch_list = await chaptersList(`https://hentai20.com/manga/${slug}/ajax/chapters/`)
+        let ch_list = await chaptersList(`https://hentaiscan.net/manga/${slug}/ajax/chapters/`)
 
          return await ({
             'page': manhwa_title,
@@ -206,7 +206,7 @@ async function chapter(manga,chapter) {
     let ch_list = []
 
     try{
-        res = await axios.get(`https://hentai20.com/manga/${manga}/${chapter}`)
+        res = await axios.get(`https://hentaiscan.net/manga/${manga}/${chapter}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
