@@ -77,7 +77,7 @@ async function all(page) {
     let m_list = []
 
     try{
-        res = await axios.get(`https://hentai20.com/manga-list/page/${page}`)
+        res = await axios.get(`https://hentaiscan.net/manga-list/page/${page}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
@@ -141,7 +141,7 @@ async function latest(page) {
     let m_list = []
 
     try{
-        res = await axios.get(`https://hentai20.com/page/${page}`)
+        res = await axios.get(`https://hentaiscan.net/page/${page}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
