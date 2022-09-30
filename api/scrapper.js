@@ -5,7 +5,7 @@ async function info(slug) {
     let genres = []
 
     try{
-        res = await axios.get(`https://www.mangaread.org/manga/${slug}`)
+        res = await axios.get(`https://manhuaplus.com/manga/${slug}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
@@ -26,7 +26,7 @@ async function info(slug) {
         
         let description = $('.description-summary').text().trim()
 
-        let ch_list = await chaptersList(`https://www.mangaread.org/manga/${slug}/ajax/chapters/`)
+        let ch_list = await chaptersList(`https://manhuaplus.com/manga/${slug}/ajax/chapters/`)
 
          return await ({
             'page': manhwa_title,
@@ -77,7 +77,7 @@ async function all(page) {
     let m_list = []
 
     try{
-        res = await axios.get(`https://www.mangaread.org/manga/page/${page}`)
+        res = await axios.get(`https://manhuaplus.com/manga/page/${page}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
@@ -141,7 +141,7 @@ async function latest(page) {
     let m_list = []
 
     try{
-        res = await axios.get(`https://www.mangaread.org/manga/page/${page}`)
+        res = await axios.get(`https://manhuaplus.com/manga/page/${page}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
@@ -206,7 +206,7 @@ async function chapter(manga,chapter) {
     let ch_list = []
 
     try{
-        res = await axios.get(`https://www.mangaread.org/manga/${manga}/${chapter}`)
+        res = await axios.get(`https://manhuaplus.com/manga/${manga}/${chapter}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
