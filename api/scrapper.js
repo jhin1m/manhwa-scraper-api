@@ -77,7 +77,7 @@ async function all(page) {
     let m_list = []
 
     try{
-        res = await axios.get(`https://www.mangaread.org/manga-list/page/${page}`)
+        res = await axios.get(`https://www.mangaread.org/manga/page/${page}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
@@ -141,7 +141,7 @@ async function latest(page) {
     let m_list = []
 
     try{
-        res = await axios.get(`https://www.mangaread.org/page/${page}`)
+        res = await axios.get(`https://www.mangaread.org/manga/page/${page}`)
         const body = await res.data;
         const $ = cheerio.load(body)
 
